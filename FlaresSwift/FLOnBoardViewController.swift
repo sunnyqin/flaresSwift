@@ -20,6 +20,8 @@ class FLOnBoardViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		self.navigationController?.navigationBarHidden = true
+		
 		showTutorial()
 	}
 	

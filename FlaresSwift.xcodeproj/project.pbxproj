@@ -15,9 +15,14 @@
 		E971504B1AA00EB600CBF6A0 /* FLOnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971504A1AA00EB600CBF6A0 /* FLOnBoardViewController.swift */; };
 		E971504D1AA0115500CBF6A0 /* FLTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971504C1AA0115500CBF6A0 /* FLTutorial.swift */; };
 		E97150521AA011F900CBF6A0 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150511AA011F900CBF6A0 /* SwiftyJSON.swift */; };
-		E97150551AA0121C00CBF6A0 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150541AA0121C00CBF6A0 /* Alamofire.swift */; };
 		E97150571AA05E8100CBF6A0 /* FLSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150561AA05E8100CBF6A0 /* FLSignUpViewController.swift */; };
 		E97150591AA05E9600CBF6A0 /* FLSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150581AA05E9600CBF6A0 /* FLSignInViewController.swift */; };
+		E9FB42291AA1527F00FF8F34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB42281AA1527F00FF8F34 /* User.swift */; };
+		E9FB422D1AA1547B00FF8F34 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB422C1AA1547B00FF8F34 /* CoreDataStack.swift */; };
+		E9FB42311AA156B400FF8F34 /* FlaresLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB42301AA156B400FF8F34 /* FlaresLogin.swift */; };
+		E9FB426F1AA1642600FF8F34 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FB426A1AA163D900FF8F34 /* Alamofire.framework */; };
+		E9FB42701AA1642600FF8F34 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9FB426A1AA163D900FF8F34 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9FB42751AA187C300FF8F34 /* FLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB42741AA187C300FF8F34 /* FLHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +33,49 @@
 			remoteGlobalIDString = E971501D1AA00CE900CBF6A0;
 			remoteInfo = FlaresSwift;
 		};
+		E9FB42691AA163D900FF8F34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9FB42641AA163D900FF8F34 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		E9FB426B1AA163D900FF8F34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9FB42641AA163D900FF8F34 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		E9FB426D1AA1640800FF8F34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9FB42641AA163D900FF8F34 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		E9FB42711AA1642600FF8F34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9FB42641AA163D900FF8F34 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E9FB42731AA1642600FF8F34 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E9FB42701AA1642600FF8F34 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E971501E1AA00CEA00CBF6A0 /* FlaresSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlaresSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +90,13 @@
 		E971504A1AA00EB600CBF6A0 /* FLOnBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLOnBoardViewController.swift; sourceTree = "<group>"; };
 		E971504C1AA0115500CBF6A0 /* FLTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTutorial.swift; sourceTree = "<group>"; };
 		E97150511AA011F900CBF6A0 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		E97150531AA0121C00CBF6A0 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
-		E97150541AA0121C00CBF6A0 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		E97150561AA05E8100CBF6A0 /* FLSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSignUpViewController.swift; sourceTree = "<group>"; };
 		E97150581AA05E9600CBF6A0 /* FLSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSignInViewController.swift; sourceTree = "<group>"; };
+		E9FB42281AA1527F00FF8F34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E9FB422C1AA1547B00FF8F34 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E9FB42301AA156B400FF8F34 /* FlaresLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaresLogin.swift; sourceTree = "<group>"; };
+		E9FB42641AA163D900FF8F34 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
+		E9FB42741AA187C300FF8F34 /* FLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FB426F1AA1642600FF8F34 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,9 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				E97150231AA00CEA00CBF6A0 /* AppDelegate.swift */,
-				E97150501AA011D600CBF6A0 /* Alamofire */,
-				E971504F1AA011C600CBF6A0 /* JSON */,
+				E9FB422E1AA1550D00FF8F34 /* ThirdPartyLib */,
+				E9FB422B1AA1546500FF8F34 /* CoreData */,
 				E97150461AA00DA300CBF6A0 /* Sign-up & Log-in */,
+				E9FB42271AA1525800FF8F34 /* Model */,
 				E97150471AA00E3B00CBF6A0 /* Resources */,
 				E97150211AA00CEA00CBF6A0 /* Supporting Files */,
 			);
@@ -130,6 +182,7 @@
 				E971504C1AA0115500CBF6A0 /* FLTutorial.swift */,
 				E97150561AA05E8100CBF6A0 /* FLSignUpViewController.swift */,
 				E97150581AA05E9600CBF6A0 /* FLSignInViewController.swift */,
+				E9FB42741AA187C300FF8F34 /* FLHomeViewController.swift */,
 			);
 			name = "Sign-up & Log-in";
 			sourceTree = "<group>";
@@ -152,13 +205,39 @@
 			name = JSON;
 			sourceTree = "<group>";
 		};
-		E97150501AA011D600CBF6A0 /* Alamofire */ = {
+		E9FB42271AA1525800FF8F34 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E97150531AA0121C00CBF6A0 /* Alamofire.h */,
-				E97150541AA0121C00CBF6A0 /* Alamofire.swift */,
+				E9FB42281AA1527F00FF8F34 /* User.swift */,
+				E9FB42301AA156B400FF8F34 /* FlaresLogin.swift */,
 			);
-			name = Alamofire;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E9FB422B1AA1546500FF8F34 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB422C1AA1547B00FF8F34 /* CoreDataStack.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		E9FB422E1AA1550D00FF8F34 /* ThirdPartyLib */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB42641AA163D900FF8F34 /* Alamofire.xcodeproj */,
+				E971504F1AA011C600CBF6A0 /* JSON */,
+			);
+			name = ThirdPartyLib;
+			sourceTree = "<group>";
+		};
+		E9FB42651AA163D900FF8F34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB426A1AA163D900FF8F34 /* Alamofire.framework */,
+				E9FB426C1AA163D900FF8F34 /* AlamofireTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +250,13 @@
 				E971501A1AA00CE900CBF6A0 /* Sources */,
 				E971501B1AA00CE900CBF6A0 /* Frameworks */,
 				E971501C1AA00CE900CBF6A0 /* Resources */,
+				E9FB42731AA1642600FF8F34 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E9FB426E1AA1640800FF8F34 /* PBXTargetDependency */,
+				E9FB42721AA1642600FF8F34 /* PBXTargetDependency */,
 			);
 			name = FlaresSwift;
 			productName = FlaresSwift;
@@ -229,6 +311,12 @@
 			mainGroup = E97150151AA00CE900CBF6A0;
 			productRefGroup = E971501F1AA00CEA00CBF6A0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E9FB42651AA163D900FF8F34 /* Products */;
+					ProjectRef = E9FB42641AA163D900FF8F34 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E971501D1AA00CE900CBF6A0 /* FlaresSwift */,
@@ -236,6 +324,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E9FB426A1AA163D900FF8F34 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E9FB42691AA163D900FF8F34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9FB426C1AA163D900FF8F34 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = E9FB426B1AA163D900FF8F34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E971501C1AA00CE900CBF6A0 /* Resources */ = {
@@ -262,11 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E97150591AA05E9600CBF6A0 /* FLSignInViewController.swift in Sources */,
-				E97150551AA0121C00CBF6A0 /* Alamofire.swift in Sources */,
 				E97150271AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodeld in Sources */,
 				E97150571AA05E8100CBF6A0 /* FLSignUpViewController.swift in Sources */,
 				E971504D1AA0115500CBF6A0 /* FLTutorial.swift in Sources */,
+				E9FB422D1AA1547B00FF8F34 /* CoreDataStack.swift in Sources */,
+				E9FB42291AA1527F00FF8F34 /* User.swift in Sources */,
+				E9FB42311AA156B400FF8F34 /* FlaresLogin.swift in Sources */,
 				E971504B1AA00EB600CBF6A0 /* FLOnBoardViewController.swift in Sources */,
+				E9FB42751AA187C300FF8F34 /* FLHomeViewController.swift in Sources */,
 				E97150521AA011F900CBF6A0 /* SwiftyJSON.swift in Sources */,
 				E97150241AA00CEA00CBF6A0 /* AppDelegate.swift in Sources */,
 			);
@@ -287,6 +395,16 @@
 			isa = PBXTargetDependency;
 			target = E971501D1AA00CE900CBF6A0 /* FlaresSwift */;
 			targetProxy = E97150371AA00CEA00CBF6A0 /* PBXContainerItemProxy */;
+		};
+		E9FB426E1AA1640800FF8F34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = E9FB426D1AA1640800FF8F34 /* PBXContainerItemProxy */;
+		};
+		E9FB42721AA1642600FF8F34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = E9FB42711AA1642600FF8F34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -386,11 +504,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FlaresSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -401,11 +521,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FlaresSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -462,6 +584,7 @@
 				E97150421AA00CEA00CBF6A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E97150431AA00CEA00CBF6A0 /* Build configuration list for PBXNativeTarget "FlaresSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +593,7 @@
 				E97150451AA00CEA00CBF6A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

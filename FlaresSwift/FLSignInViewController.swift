@@ -57,7 +57,7 @@ class FLSignInViewController: UIViewController {
 		
 		countryCodeTextField = UITextField()
 		countryCodeTextField.placeholder = ""
-		countryCodeTextField.text = "+86"
+		countryCodeTextField.text = "86"
 		countryCodeTextField.textColor = UIColor.whiteColor()
 		countryCodeTextField.keyboardType = UIKeyboardType.NumberPad
 		countryCodeTextField.returnKeyType = UIReturnKeyType.Next
@@ -194,5 +194,37 @@ class FLSignInViewController: UIViewController {
 	
 	func login() -> Void {
 		
+		let phonenumber = phoneNumberTextField.text
+		let passcode = passcodeTextField.text
+		let countrycode = countryCodeTextField.text
+		
+		var user = User()
+		user.phoneNumber = phonenumber
+		user.countryCode = countrycode
+		
+		FlaresLogin.login(user, passcode: passcode) {
+			switch ($0) {
+				case .Error(let message):
+					let alert = UIAlertView(title: message, message: nil, delegate: nil, cancelButtonTitle: "OK")
+					alert.show()
+					break
+				case .Results(let results):
+					let alert = UIAlertView(title: "login success", message: nil, delegate: self, cancelButtonTitle: "OK")
+					alert.show()
+					break
+			}
+		}
+	}
+}
+
+extension FLSignInViewController: UIAlertViewDelegate {
+	func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+		if buttonIndex == 0 {
+			var appDelegate = UIApplication.sharedApplication().delegate
+			var window = appDelegate?.window
+			let homeViewController = UINavigationController(rootViewController: FLHomeViewController())
+			
+			window??.rootViewController = homeViewController
+		}
 	}
 }
