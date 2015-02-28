@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70E572C8-4C65-4C01-B51A-488CBFE6C5F4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlaresSwift</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>13B1F3712187E0B0362765E5480B7B7BA54D9101</key>
+		<string>https://github.com/sunnyqin/flaresSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlaresSwift.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>13B1F3712187E0B0362765E5480B7B7BA54D9101</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sunnyqin/flaresSwift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>13B1F3712187E0B0362765E5480B7B7BA54D9101</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>13B1F3712187E0B0362765E5480B7B7BA54D9101</string>
+			<key>IDESourceControlWCCName</key>
+			<string>flaresSwift</string>
+		</dict>
+	</array>
+</dict>
+</plist>

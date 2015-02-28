@@ -8,8 +8,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class FLHomeViewController: UIViewController {
+	
+	var loginUser: User!
 	
 	convenience override init() {
 		self.init(nibName: nil, bundle: nil)
@@ -41,9 +44,15 @@ class FLHomeViewController: UIViewController {
 	}
 	
 	func logout() -> Void {
-		var appDelegate = UIApplication.sharedApplication().delegate
-		var window = appDelegate?.window
+		
+		let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+		if loginUser != nil {
+			appDelegate.coreDataStack.context.deleteObject(loginUser)
+			appDelegate.coreDataStack.saveContext()
+		}
+		
+		var window = appDelegate.window
 		let rootViewController = FLOnBoardViewController()
-		window??.rootViewController = rootViewController
+		window.rootViewController = rootViewController
 	}
 }

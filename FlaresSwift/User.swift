@@ -7,45 +7,19 @@
 //
 
 import Foundation
+import CoreData
 
-class User {
-	
-	var userID: String?
-	var userToken: String?
-	var countryCode: String?
-	var phoneNumber: String?
-	var deviceId: String?
-	var phoneNumberVerified: Int?
-	var email: String?
-	
-	init() {
+@objc(User)
 
-	}
-	
-	class func createUserFromJSON(json: JSON) -> User {
-		var user = User()
-		
-		if let userid = json["user_id"].string {
-			user.userID = userid
-		}
-		if let token = json["token"].string {
-			user.userToken = token
-		}
-		if let phone = json["phone_number"].string {
-			user.phoneNumber = phone
-		}
-		if let countryCode = json["country_code"].string {
-			user.countryCode = countryCode
-		}
-		if let deviceId = json["device_id"].string {
-			user.deviceId = deviceId
-		}
-		if let email = json["email"].string {
-			user.email = email
-		}
-		if let phoneNumberVerified = json["phone_number_verified"].int {
-			user.phoneNumberVerified = phoneNumberVerified
-		}
-		return user
-	}
+class User: NSManagedObject {
+
+    @NSManaged var countryCode: String
+    @NSManaged var deviceId: String
+    @NSManaged var email: String
+    @NSManaged var phoneNumber: String
+    @NSManaged var userID: String
+    @NSManaged var userToken: String
+	@NSManaged var avatarURL: String
+	@NSManaged var name: String
+	@NSManaged var phoneNumberVerified: Int
 }

@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 let SelectCountryString = "select a country"
 
 class FLSignInViewController: UIViewController {
-	
+
 	var countryLabel: UILabel!
 	var countryCodeTextField: UITextField!
 	var phoneNumberTextField: UITextField!
@@ -192,17 +193,51 @@ class FLSignInViewController: UIViewController {
 		self.dismissViewControllerAnimated(false, completion: {})
 	}
 	
+	func saveUserInfo(results: FLUser) -> Void {
+		let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+		let user: User =
+		NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: appDelegate.coreDataStack.context) as User
+		if let userID = results.userID {
+			user.userID = userID
+		}
+		if let userToken = results.userToken {
+			user.userToken = userToken
+		}
+		if let phoneNumber = results.phoneNumber {
+			user.phoneNumber = phoneNumber
+		}
+		if let countryCode = results.countryCode {
+			user.countryCode = countryCode
+		}
+		if let deviceId = results.deviceId {
+			user.deviceId = deviceId
+		}
+		if let email = results.email {
+			user.email = email
+		}
+		if let avatarURL = results.avatarURL {
+			user.avatarURL = avatarURL
+		}
+		if let name = results.name {
+			user.name = name
+		}
+		if let phoneNumberVerified = results.phoneNumberVerified {
+			user.phoneNumberVerified = phoneNumberVerified
+		}
+		appDelegate.coreDataStack.saveContext()
+	}
+	
 	func login() -> Void {
 		
 		let phonenumber = phoneNumberTextField.text
 		let passcode = passcodeTextField.text
 		let countrycode = countryCodeTextField.text
 		
-		var user = User()
+		var user = FLUser()
 		user.phoneNumber = phonenumber
 		user.countryCode = countrycode
 		
-		FlaresLogin.login(user, passcode: passcode) {
+		FLUser.login(user, passcode: passcode) {
 			switch ($0) {
 				case .Error(let message):
 					let alert = UIAlertView(title: message, message: nil, delegate: nil, cancelButtonTitle: "OK")
@@ -211,6 +246,8 @@ class FLSignInViewController: UIViewController {
 				case .Results(let results):
 					let alert = UIAlertView(title: "login success", message: nil, delegate: self, cancelButtonTitle: "OK")
 					alert.show()
+					
+					self.saveUserInfo(results)
 					break
 			}
 		}
@@ -220,11 +257,18 @@ class FLSignInViewController: UIViewController {
 extension FLSignInViewController: UIAlertViewDelegate {
 	func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
 		if buttonIndex == 0 {
-			var appDelegate = UIApplication.sharedApplication().delegate
-			var window = appDelegate?.window
-			let homeViewController = UINavigationController(rootViewController: FLHomeViewController())
-			
-			window??.rootViewController = homeViewController
+			let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+			var window = appDelegate.window
+			var error: NSError?
+			if let fetchRequest = appDelegate.coreDataStack.model.fetchRequestTemplateForName("UserFetchRequest") {
+				let results = appDelegate.coreDataStack.context.executeFetchRequest(fetchRequest,error: &error) as [User]
+				if let user = results.first {
+					let homeViewController = FLHomeViewController()
+					homeViewController.loginUser = user
+					let navController = UINavigationController(rootViewController: homeViewController)
+					window.rootViewController = navController
+				}
+			}
 		}
 	}
 }

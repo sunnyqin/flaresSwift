@@ -2,4 +2,52 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlaresSwift/FLSignInViewController.swift"
+            timestampString = "446807003.997556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "login()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlaresSwift.FLSignInViewController.(login (FlaresSwift.FLSignInViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "FlaresSwift"
+                  urlString = "file:///Users/SunnyQin/flaresSwift/FlaresSwift/FLSignInViewController.swift"
+                  timestampString = "446806500.076589"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlaresSwift.FLSignInViewController.(login (FlaresSwift.FLSignInViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "FlaresSwift"
+                  urlString = "file:///Users/SunnyQin/flaresSwift/FlaresSwift/FLSignInViewController.swift"
+                  timestampString = "446806500.076715"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "57">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
