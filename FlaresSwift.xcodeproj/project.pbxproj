@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E97150241AA00CEA00CBF6A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150231AA00CEA00CBF6A0 /* AppDelegate.swift */; };
+		E97150271AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97150251AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodeld */; };
+		E971502E1AA00CEA00CBF6A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E971502D1AA00CEA00CBF6A0 /* Images.xcassets */; };
+		E97150311AA00CEA00CBF6A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E971502F1AA00CEA00CBF6A0 /* LaunchScreen.xib */; };
+		E971503D1AA00CEA00CBF6A0 /* FlaresSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971503C1AA00CEA00CBF6A0 /* FlaresSwiftTests.swift */; };
+		E971504B1AA00EB600CBF6A0 /* FLOnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971504A1AA00EB600CBF6A0 /* FLOnBoardViewController.swift */; };
+		E971504D1AA0115500CBF6A0 /* FLTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971504C1AA0115500CBF6A0 /* FLTutorial.swift */; };
+		E97150521AA011F900CBF6A0 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150511AA011F900CBF6A0 /* SwiftyJSON.swift */; };
+		E97150551AA0121C00CBF6A0 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150541AA0121C00CBF6A0 /* Alamofire.swift */; };
+		E97150571AA05E8100CBF6A0 /* FLSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150561AA05E8100CBF6A0 /* FLSignUpViewController.swift */; };
+		E97150591AA05E9600CBF6A0 /* FLSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150581AA05E9600CBF6A0 /* FLSignInViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E97150371AA00CEA00CBF6A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E97150161AA00CE900CBF6A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E971501D1AA00CE900CBF6A0;
+			remoteInfo = FlaresSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E971501E1AA00CEA00CBF6A0 /* FlaresSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlaresSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97150221AA00CEA00CBF6A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E97150231AA00CEA00CBF6A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E97150261AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlaresSwift.xcdatamodel; sourceTree = "<group>"; };
+		E971502D1AA00CEA00CBF6A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E97150301AA00CEA00CBF6A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E97150361AA00CEA00CBF6A0 /* FlaresSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaresSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E971503B1AA00CEA00CBF6A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E971503C1AA00CEA00CBF6A0 /* FlaresSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaresSwiftTests.swift; sourceTree = "<group>"; };
+		E971504A1AA00EB600CBF6A0 /* FLOnBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLOnBoardViewController.swift; sourceTree = "<group>"; };
+		E971504C1AA0115500CBF6A0 /* FLTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTutorial.swift; sourceTree = "<group>"; };
+		E97150511AA011F900CBF6A0 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E97150531AA0121C00CBF6A0 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
+		E97150541AA0121C00CBF6A0 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		E97150561AA05E8100CBF6A0 /* FLSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSignUpViewController.swift; sourceTree = "<group>"; };
+		E97150581AA05E9600CBF6A0 /* FLSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSignInViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E971501B1AA00CE900CBF6A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97150331AA00CEA00CBF6A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E97150151AA00CE900CBF6A0 = {
+			isa = PBXGroup;
+			children = (
+				E97150201AA00CEA00CBF6A0 /* FlaresSwift */,
+				E97150391AA00CEA00CBF6A0 /* FlaresSwiftTests */,
+				E971501F1AA00CEA00CBF6A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E971501F1AA00CEA00CBF6A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E971501E1AA00CEA00CBF6A0 /* FlaresSwift.app */,
+				E97150361AA00CEA00CBF6A0 /* FlaresSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E97150201AA00CEA00CBF6A0 /* FlaresSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E97150231AA00CEA00CBF6A0 /* AppDelegate.swift */,
+				E97150501AA011D600CBF6A0 /* Alamofire */,
+				E971504F1AA011C600CBF6A0 /* JSON */,
+				E97150461AA00DA300CBF6A0 /* Sign-up & Log-in */,
+				E97150471AA00E3B00CBF6A0 /* Resources */,
+				E97150211AA00CEA00CBF6A0 /* Supporting Files */,
+			);
+			path = FlaresSwift;
+			sourceTree = "<group>";
+		};
+		E97150211AA00CEA00CBF6A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E97150221AA00CEA00CBF6A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E97150391AA00CEA00CBF6A0 /* FlaresSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				E971503C1AA00CEA00CBF6A0 /* FlaresSwiftTests.swift */,
+				E971503A1AA00CEA00CBF6A0 /* Supporting Files */,
+			);
+			path = FlaresSwiftTests;
+			sourceTree = "<group>";
+		};
+		E971503A1AA00CEA00CBF6A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E971503B1AA00CEA00CBF6A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E97150461AA00DA300CBF6A0 /* Sign-up & Log-in */ = {
+			isa = PBXGroup;
+			children = (
+				E971504A1AA00EB600CBF6A0 /* FLOnBoardViewController.swift */,
+				E971504C1AA0115500CBF6A0 /* FLTutorial.swift */,
+				E97150561AA05E8100CBF6A0 /* FLSignUpViewController.swift */,
+				E97150581AA05E9600CBF6A0 /* FLSignInViewController.swift */,
+			);
+			name = "Sign-up & Log-in";
+			sourceTree = "<group>";
+		};
+		E97150471AA00E3B00CBF6A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E971502D1AA00CEA00CBF6A0 /* Images.xcassets */,
+				E971502F1AA00CEA00CBF6A0 /* LaunchScreen.xib */,
+				E97150251AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E971504F1AA011C600CBF6A0 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E97150511AA011F900CBF6A0 /* SwiftyJSON.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		E97150501AA011D600CBF6A0 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				E97150531AA0121C00CBF6A0 /* Alamofire.h */,
+				E97150541AA0121C00CBF6A0 /* Alamofire.swift */,
+			);
+			name = Alamofire;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E971501D1AA00CE900CBF6A0 /* FlaresSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E97150401AA00CEA00CBF6A0 /* Build configuration list for PBXNativeTarget "FlaresSwift" */;
+			buildPhases = (
+				E971501A1AA00CE900CBF6A0 /* Sources */,
+				E971501B1AA00CE900CBF6A0 /* Frameworks */,
+				E971501C1AA00CE900CBF6A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlaresSwift;
+			productName = FlaresSwift;
+			productReference = E971501E1AA00CEA00CBF6A0 /* FlaresSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E97150351AA00CEA00CBF6A0 /* FlaresSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E97150431AA00CEA00CBF6A0 /* Build configuration list for PBXNativeTarget "FlaresSwiftTests" */;
+			buildPhases = (
+				E97150321AA00CEA00CBF6A0 /* Sources */,
+				E97150331AA00CEA00CBF6A0 /* Frameworks */,
+				E97150341AA00CEA00CBF6A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E97150381AA00CEA00CBF6A0 /* PBXTargetDependency */,
+			);
+			name = FlaresSwiftTests;
+			productName = FlaresSwiftTests;
+			productReference = E97150361AA00CEA00CBF6A0 /* FlaresSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E97150161AA00CE900CBF6A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Suny Qin";
+				TargetAttributes = {
+					E971501D1AA00CE900CBF6A0 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 6AM6RAJ294;
+					};
+					E97150351AA00CEA00CBF6A0 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E971501D1AA00CE900CBF6A0;
+					};
+				};
+			};
+			buildConfigurationList = E97150191AA00CE900CBF6A0 /* Build configuration list for PBXProject "FlaresSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E97150151AA00CE900CBF6A0;
+			productRefGroup = E971501F1AA00CEA00CBF6A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E971501D1AA00CE900CBF6A0 /* FlaresSwift */,
+				E97150351AA00CEA00CBF6A0 /* FlaresSwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E971501C1AA00CE900CBF6A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97150311AA00CEA00CBF6A0 /* LaunchScreen.xib in Resources */,
+				E971502E1AA00CEA00CBF6A0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97150341AA00CEA00CBF6A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E971501A1AA00CE900CBF6A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97150591AA05E9600CBF6A0 /* FLSignInViewController.swift in Sources */,
+				E97150551AA0121C00CBF6A0 /* Alamofire.swift in Sources */,
+				E97150271AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodeld in Sources */,
+				E97150571AA05E8100CBF6A0 /* FLSignUpViewController.swift in Sources */,
+				E971504D1AA0115500CBF6A0 /* FLTutorial.swift in Sources */,
+				E971504B1AA00EB600CBF6A0 /* FLOnBoardViewController.swift in Sources */,
+				E97150521AA011F900CBF6A0 /* SwiftyJSON.swift in Sources */,
+				E97150241AA00CEA00CBF6A0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97150321AA00CEA00CBF6A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E971503D1AA00CEA00CBF6A0 /* FlaresSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E97150381AA00CEA00CBF6A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E971501D1AA00CE900CBF6A0 /* FlaresSwift */;
+			targetProxy = E97150371AA00CEA00CBF6A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E971502F1AA00CEA00CBF6A0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E97150301AA00CEA00CBF6A0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E971503E1AA00CEA00CBF6A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E971503F1AA00CEA00CBF6A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E97150411AA00CEA00CBF6A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = FlaresSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		E97150421AA00CEA00CBF6A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = FlaresSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		E97150441AA00CEA00CBF6A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlaresSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlaresSwift.app/FlaresSwift";
+			};
+			name = Debug;
+		};
+		E97150451AA00CEA00CBF6A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlaresSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlaresSwift.app/FlaresSwift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E97150191AA00CE900CBF6A0 /* Build configuration list for PBXProject "FlaresSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E971503E1AA00CEA00CBF6A0 /* Debug */,
+				E971503F1AA00CEA00CBF6A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E97150401AA00CEA00CBF6A0 /* Build configuration list for PBXNativeTarget "FlaresSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E97150411AA00CEA00CBF6A0 /* Debug */,
+				E97150421AA00CEA00CBF6A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E97150431AA00CEA00CBF6A0 /* Build configuration list for PBXNativeTarget "FlaresSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E97150441AA00CEA00CBF6A0 /* Debug */,
+				E97150451AA00CEA00CBF6A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E97150251AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E97150261AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodel */,
+			);
+			currentVersion = E97150261AA00CEA00CBF6A0 /* FlaresSwift.xcdatamodel */;
+			path = FlaresSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E97150161AA00CE900CBF6A0 /* Project object */;
+}
