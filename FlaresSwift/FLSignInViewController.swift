@@ -194,9 +194,8 @@ class FLSignInViewController: UIViewController {
 	}
 	
 	func saveUserInfo(results: FLUser) -> Void {
-		let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 		let user: User =
-		NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: appDelegate.coreDataStack.context) as User
+		NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: FlaresAppDelegate.coreDataStack.context) as User
 		if let userID = results.userID {
 			user.userID = userID
 		}
@@ -224,7 +223,7 @@ class FLSignInViewController: UIViewController {
 		if let phoneNumberVerified = results.phoneNumberVerified {
 			user.phoneNumberVerified = phoneNumberVerified
 		}
-		appDelegate.coreDataStack.saveContext()
+		FlaresAppDelegate.coreDataStack.saveContext()
 	}
 	
 	func login() -> Void {
@@ -249,7 +248,6 @@ class FLSignInViewController: UIViewController {
 					let alert = UIAlertView(title: "login success", message: nil, delegate: self, cancelButtonTitle: "OK")
 					alert.show()
 					
-					self.saveUserInfo(results)
 					break
 			}
 			SVProgressHUD.dismiss()
@@ -260,17 +258,11 @@ class FLSignInViewController: UIViewController {
 extension FLSignInViewController: UIAlertViewDelegate {
 	func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
 		if buttonIndex == 0 {
-			let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-			var window = appDelegate.window
-			var error: NSError?
-			if let fetchRequest = appDelegate.coreDataStack.model.fetchRequestTemplateForName("UserFetchRequest") {
-				let results = appDelegate.coreDataStack.context.executeFetchRequest(fetchRequest,error: &error) as [User]
-				if let user = results.first {
-					let homeViewController = FLHomeViewController()
-					homeViewController.loginUser = user
-					let navController = UINavigationController(rootViewController: homeViewController)
-					window.rootViewController = navController
-				}
+			if let user = User.getSessionUser() {
+				let homeViewController = FLHomeViewController()
+				homeViewController.loginUser = user
+				let navController = UINavigationController(rootViewController: homeViewController)
+				FlaresAppWindow.rootViewController = navController
 			}
 		}
 	}

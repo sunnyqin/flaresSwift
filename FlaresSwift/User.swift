@@ -21,5 +21,16 @@ class User: NSManagedObject {
     @NSManaged var userToken: String
 	@NSManaged var avatarURL: String
 	@NSManaged var name: String
-	@NSManaged var phoneNumberVerified: Int
+	@NSManaged var phoneNumberVerified: NSNumber
+	
+	class func getSessionUser() -> User? {
+		var error: NSError?
+		if let fetchRequest = FlaresAppDelegate.coreDataStack.model.fetchRequestTemplateForName("UserFetchRequest") {
+			let results = FlaresAppDelegate.coreDataStack.context.executeFetchRequest(fetchRequest,error: &error) as [User]
+			if let user = results.first {
+				return user
+			}
+		}
+		return nil
+	}
 }

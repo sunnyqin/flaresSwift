@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import CoreData
 
 let baseURL = "http://nox.flareworks.co:9090"
 let loginURL = "http://nox.flareworks.co:9090/users/login"
@@ -27,6 +28,29 @@ class FLUser {
 	init() {
 		
 	}
+	
+	init(user: User) {
+		self.userID = user.userID
+		self.userToken = user.userToken
+		self.countryCode = user.countryCode
+		self.phoneNumber = user.phoneNumber
+		self.deviceId = user.deviceId
+		self.phoneNumberVerified = Int(user.phoneNumberVerified)
+		self.email = user.email
+		self.avatarURL = user.avatarURL
+		self.name = user.name
+	}
+	
+//	class var sessionUser : FLUser {
+//		struct Static {
+//			static var onceToken : dispatch_once_t = 0
+//			static var instance : FLUser? = nil
+//		}
+//		dispatch_once(&Static.onceToken) {
+//			Static.instance = FLUser()
+//		}
+//		return Static.instance!
+//	}
 	
 	class func createUserFromJSON(json: JSON) -> FLUser {
 		var user = FLUser()
@@ -61,8 +85,41 @@ class FLUser {
 		return user
 	}
 	
-	func updateSessionUser() -> Void {
-		
+	func createOrUpdateSessionUser() -> Void {
+		if let user = User.getSessionUser() {
+			FlaresAppDelegate.coreDataStack.context.deleteObject(user)
+		}
+			
+		let user: User =
+		NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: FlaresAppDelegate.coreDataStack.context) as User
+		if let userID = self.userID {
+			user.userID = userID
+		}
+		if let userToken = self.userToken {
+			user.userToken = userToken
+		}
+		if let phoneNumber = self.phoneNumber {
+			user.phoneNumber = phoneNumber
+		}
+		if let countryCode = self.countryCode {
+			user.countryCode = countryCode
+		}
+		if let deviceId = self.deviceId {
+			user.deviceId = deviceId
+		}
+		if let email = self.email {
+			user.email = email
+		}
+		if let avatarURL = self.avatarURL {
+			user.avatarURL = avatarURL
+		}
+		if let name = self.name {
+			user.name = name
+		}
+		if let phoneNumberVerified = self.phoneNumberVerified {
+			user.phoneNumberVerified = phoneNumberVerified
+		}
+		FlaresAppDelegate.coreDataStack.saveContext()
 	}
 }
 
@@ -112,6 +169,7 @@ extension FLUser {
 			}
 			else{
 				var user = FLUser.createUserFromJSON(json)
+				user.createOrUpdateSessionUser()
 				
 				if user.userID != nil && user.userToken != nil {
 					FLUser.findUser(user.userID!, token: user.userToken!, completion: {
@@ -168,7 +226,7 @@ extension FLUser {
 				user.userToken = token
 				completion(result: .Results(user))
 				
-//				user.updateSessionUser()
+				user.createOrUpdateSessionUser()
 			}
 		}
 	}

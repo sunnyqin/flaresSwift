@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,17 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		self.window.backgroundColor = UIColor.whiteColor()
 		
-		var error: NSError?
-		if let fetchRequest = coreDataStack.model.fetchRequestTemplateForName("UserFetchRequest") {
-			let results = coreDataStack.context.executeFetchRequest(fetchRequest,error: &error) as [User]
-			if let user = results.first {
-				let homeViewController = FLHomeViewController()
-				homeViewController.loginUser = user
-				self.window.rootViewController = UINavigationController(rootViewController: homeViewController)
-				self.window.makeKeyAndVisible()
-				return true
-			}
+		if let user = User.getSessionUser() {
+			let homeViewController = FLHomeViewController()
+			homeViewController.loginUser = user
+			self.window.rootViewController = UINavigationController(rootViewController: homeViewController)
+			self.window.makeKeyAndVisible()
+			return true
 		}
+		
 		self.window.rootViewController = UINavigationController(rootViewController: FLOnBoardViewController())
 		self.window.makeKeyAndVisible()
 		return true
