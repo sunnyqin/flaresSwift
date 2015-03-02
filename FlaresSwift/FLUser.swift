@@ -25,7 +25,7 @@ class FLUser {
 	var name: String?
 	
 	init() {
-
+		
 	}
 	
 	class func createUserFromJSON(json: JSON) -> FLUser {
@@ -59,6 +59,10 @@ class FLUser {
 			user.name = name
 		}
 		return user
+	}
+	
+	func updateSessionUser() -> Void {
+		
 	}
 }
 
@@ -163,6 +167,8 @@ extension FLUser {
 				user.userID = userID
 				user.userToken = token
 				completion(result: .Results(user))
+				
+//				user.updateSessionUser()
 			}
 		}
 	}

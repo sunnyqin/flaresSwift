@@ -229,6 +229,8 @@ class FLSignInViewController: UIViewController {
 	
 	func login() -> Void {
 		
+		SVProgressHUD.showWithStatus("Signing In...", maskType: SVProgressHUDMaskType.Clear)
+		
 		let phonenumber = phoneNumberTextField.text
 		let passcode = passcodeTextField.text
 		let countrycode = countryCodeTextField.text
@@ -250,6 +252,7 @@ class FLSignInViewController: UIViewController {
 					self.saveUserInfo(results)
 					break
 			}
+			SVProgressHUD.dismiss()
 		}
 	}
 }
