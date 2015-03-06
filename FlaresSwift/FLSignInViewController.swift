@@ -54,7 +54,11 @@ class FLSignInViewController: UIViewController {
 		countryLabel.numberOfLines = 1
 		countryLabel.textAlignment = NSTextAlignment.Left
 		countryLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+		countryLabel.userInteractionEnabled = true
 		countryLabel.text = SelectCountryString
+		
+		let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tapSelectCountry:"))
+		countryLabel.addGestureRecognizer(tapGesture)
 		
 		countryCodeTextField = UITextField()
 		countryCodeTextField.placeholder = ""
@@ -193,6 +197,12 @@ class FLSignInViewController: UIViewController {
 		self.dismissViewControllerAnimated(false, completion: {})
 	}
 	
+	func tapSelectCountry(gesture: UITapGestureRecognizer) {
+		let controller = FLCountryListViewController()
+		controller.delegate = self
+		presentViewController(controller, animated: true, completion: {})
+	}
+	
 	func saveUserInfo(results: FLUser) -> Void {
 		let user: User =
 		NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: FlaresAppDelegate.coreDataStack.context) as User
@@ -265,5 +275,15 @@ extension FLSignInViewController: UIAlertViewDelegate {
 				FlaresAppWindow.rootViewController = navController
 			}
 		}
+	}
+}
+
+extension FLSignInViewController: FLCountryListViewControllerDelegate {
+	func didSelectCountry(dictionary: NSDictionary) {
+		var code = dictionary["dial_code"] as String
+		var name = dictionary["name"] as String
+		let index = advance(code.startIndex, 1)
+		countryCodeTextField.text = code.substringFromIndex(index)
+		countryLabel.text = name
 	}
 }

@@ -2,17 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "arrow.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "flare_tutorial_3_568h@2x.png"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "flare_tutorial_3_568h@3x.png"
+      "filename" : "arrow@2x.png"
     }
   ],
   "info" : {

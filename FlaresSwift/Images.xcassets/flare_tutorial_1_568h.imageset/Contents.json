@@ -2,6 +2,10 @@
   "images" : [
     {
       "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
       "scale" : "2x",
       "filename" : "flare_tutorial_1_568h@2x.png"
     },

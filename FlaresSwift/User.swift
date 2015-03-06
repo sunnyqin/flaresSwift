@@ -23,6 +23,8 @@ class User: NSManagedObject {
 	@NSManaged var name: String
 	@NSManaged var phoneNumberVerified: NSNumber
 	
+	//MARK: getCurrentUser
+	
 	class func getSessionUser() -> User? {
 		var error: NSError?
 		if let fetchRequest = FlaresAppDelegate.coreDataStack.model.fetchRequestTemplateForName("UserFetchRequest") {

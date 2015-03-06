@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A88E5FC25677145FD8F3E56 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DB8AEA2ABCA78FD3C1B84E /* libPods.a */; };
+		E95809451AA9377300515675 /* FLCountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95809441AA9377300515675 /* FLCountryListViewController.swift */; };
+		E95809481AA9385B00515675 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = E95809471AA9385B00515675 /* countries.json */; };
+		E958094F1AA974FA00515675 /* FLCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E958094E1AA974FA00515675 /* FLCountryCell.swift */; };
 		E97150241AA00CEA00CBF6A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97150231AA00CEA00CBF6A0 /* AppDelegate.swift */; };
 		E971502E1AA00CEA00CBF6A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E971502D1AA00CEA00CBF6A0 /* Images.xcassets */; };
 		E97150311AA00CEA00CBF6A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E971502F1AA00CEA00CBF6A0 /* LaunchScreen.xib */; };
@@ -83,6 +86,9 @@
 		9F3DDCEDDAB2AEFA8280C22F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DB8AEA2ABCA78FD3C1B84E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BE171B70C7FB63D867E88D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E95809441AA9377300515675 /* FLCountryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCountryListViewController.swift; sourceTree = "<group>"; };
+		E95809471AA9385B00515675 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		E958094E1AA974FA00515675 /* FLCountryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCountryCell.swift; sourceTree = "<group>"; };
 		E96874331AA400C300BF394D /* FlaresSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlaresSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		E971501E1AA00CEA00CBF6A0 /* FlaresSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlaresSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97150221AA00CEA00CBF6A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,6 +217,8 @@
 				E97150561AA05E8100CBF6A0 /* FLSignUpViewController.swift */,
 				E97150581AA05E9600CBF6A0 /* FLSignInViewController.swift */,
 				E9FB42741AA187C300FF8F34 /* FLHomeViewController.swift */,
+				E95809441AA9377300515675 /* FLCountryListViewController.swift */,
+				E958094E1AA974FA00515675 /* FLCountryCell.swift */,
 			);
 			name = "Sign-up & Log-in";
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 		E97150471AA00E3B00CBF6A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E95809471AA9385B00515675 /* countries.json */,
 				E9FB42781AA1A07100FF8F34 /* FlaresSwift.xcdatamodeld */,
 				E971502D1AA00CEA00CBF6A0 /* Images.xcassets */,
 				E971502F1AA00CEA00CBF6A0 /* LaunchScreen.xib */,
@@ -378,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95809481AA9385B00515675 /* countries.json in Resources */,
 				E97150311AA00CEA00CBF6A0 /* LaunchScreen.xib in Resources */,
 				E971502E1AA00CEA00CBF6A0 /* Images.xcassets in Resources */,
 			);
@@ -436,12 +446,14 @@
 				E9FB422D1AA1547B00FF8F34 /* CoreDataStack.swift in Sources */,
 				E9FB42291AA1527F00FF8F34 /* FLUser.swift in Sources */,
 				E9FB42311AA156B400FF8F34 /* FLFlares.swift in Sources */,
+				E958094F1AA974FA00515675 /* FLCountryCell.swift in Sources */,
 				E9FB427A1AA1A07100FF8F34 /* FlaresSwift.xcdatamodeld in Sources */,
 				E971504B1AA00EB600CBF6A0 /* FLOnBoardViewController.swift in Sources */,
 				E9FB427F1AA1A18300FF8F34 /* User.swift in Sources */,
 				E9FB42751AA187C300FF8F34 /* FLHomeViewController.swift in Sources */,
 				E97150521AA011F900CBF6A0 /* SwiftyJSON.swift in Sources */,
 				E97150241AA00CEA00CBF6A0 /* AppDelegate.swift in Sources */,
+				E95809451AA9377300515675 /* FLCountryListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
